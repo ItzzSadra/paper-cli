@@ -78,6 +78,7 @@ program
         type: "text",
         name: "ram",
         message: "Enter RAM (e.g. 6G)",
+        initial: "5G",
         validate: (v) => /^[0-9]+G$/.test(v) || "Use format like 4G",
       });
       ram = custom.ram;
@@ -125,7 +126,7 @@ program
         path.join(dir, "server.properties"),
         `server-port=${port}
 online-mode=false
-motd=${name} server
+motd=${name} Server
 `
       );
 
